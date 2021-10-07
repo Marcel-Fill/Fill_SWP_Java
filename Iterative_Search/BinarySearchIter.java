@@ -3,32 +3,27 @@ package Iterative_Search;
 
 
 class BinarySearchIter {
-    // Returns index of x if it is present in arr[],
-    // else return -1
+    
     static int counter = 0;
 
 
-    int binarySearch(int arr[], int x)
+    int binarySearch(int arr[], int x)  //see if its higher or lower 
     {
         int l = 0, r = arr.length - 1;
-        while (l <= r) {
+        while (l <= r) {    //for not to pass by each other with high or low 
             int m = l + (r - l) / 2;
   
-            // Check if x is present at mid
             if (arr[m] == x)
                 return m;
   
-            // If x greater, ignore left half
             if (arr[m] < x)
                 l = m + 1;
   
-            // If x is smaller, ignore right half
             else
                 r = m - 1;
         }
   
-        // if we reach here, then element was
-        // not present
+       
         return -1;
     }
   
