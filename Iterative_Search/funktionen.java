@@ -4,22 +4,22 @@ public class funktionen {
 
 
     public static void main(String[] args) {
-        int test = powfak(2,5);
+        long test = summe(10000);
       System.out.println(test); 
     }
 
 
-public static int summe(int sum){
+public static long summe(int sum){
    int rsum = 0; 
     if(sum <= 1) {
         return 0;
     } else {
-        return sum += summe(sum -1);    //to auto take the number before 
+        return sum + summe(sum -1);    
 
     }
 }
 
-public static int fak(int fakt){
+public static long fak(int fakt){
     if(fakt <= 1){
         return 1;
     } else {
@@ -27,7 +27,7 @@ public static int fak(int fakt){
     }
 }
 
-public static int powfak(int base, int expo){
+public static long powfak(int base, int expo){
     if(expo  <= 1){
         return 1;
     } else {
