@@ -12,11 +12,11 @@ public class funktionen {
         long t3 = System.nanoTime() ;
         System.out.println("Iteratives Ergebnis " + summe(7));       
         long t4 = System.nanoTime() ;
-        System.out.println("Die Zeit für die Rekursiven Berechnung liegt bei " + ((t4-t3)/1000) + "ms" );
+        System.out.println("Die Zeit für die Rekursive Berechnung liegt bei " + ((t4-t3)/1000) + "ms" );
         long t5 = System.nanoTime() ;
         System.out.println("Iteratives Ergebnis " + summeRek(1,7));       
         long t6 = System.nanoTime() ;
-        System.out.println("Die Zeit für die Rekursiven Berechnung liegt bei " + ((t6-t5)/1000) + "ms" );
+        System.out.println("Die Zeit für die END-Rekursive Berechnung liegt bei " + ((t6-t5)/1000) + "ms" );
         
       
     }
