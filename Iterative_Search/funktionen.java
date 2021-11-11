@@ -8,15 +8,15 @@ public class funktionen {
         long t1 = System.nanoTime() ;
         System.out.println("Iteratives Ergebnis " + IterSum(7));       
         long t2 = System.nanoTime() ;
-        System.out.println("Die Zeit für die Iterative Berechnung liegt bei " + ((t2-t1)/1000) + "ms" );
+        System.out.println("Die Zeit für die Iterative Berechnung liegt bei " + ((t2-t1)/1000) + "mikro s" );
         long t3 = System.nanoTime() ;
         System.out.println("Iteratives Ergebnis " + summe(7));       
         long t4 = System.nanoTime() ;
-        System.out.println("Die Zeit für die Rekursive Berechnung liegt bei " + ((t4-t3)/1000) + "ms" );
+        System.out.println("Die Zeit für die Rekursive Berechnung liegt bei " + ((t4-t3)/1000) + "mikro s" );
         long t5 = System.nanoTime() ;
         System.out.println("Iteratives Ergebnis " + summeRek(1,7));       
         long t6 = System.nanoTime() ;
-        System.out.println("Die Zeit für die END-Rekursive Berechnung liegt bei " + ((t6-t5)/1000) + "ms" );
+        System.out.println("Die Zeit für die END-Rekursive Berechnung liegt bei " + ((t6-t5)/1000) + "mikro s" );
         
       
     }
@@ -58,7 +58,7 @@ public static long summeRek(int n, int sum){
          return 0;
      } else {
          return sum += summeRek(n + sum, sum -1);    
- 
+            //letzter Aufruf immer etwas arithmetisches 
      }
  }
 
