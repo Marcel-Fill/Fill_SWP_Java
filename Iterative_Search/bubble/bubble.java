@@ -1,4 +1,7 @@
 package Iterative_Search.bubble;
+import java.util.Random;
+
+import java.lang.reflect.Array;
 
 class bubble
 {
@@ -22,15 +25,25 @@ class bubble
             System.out.print(arr[i] + " ");
         System.out.println();
     }
+
+    public static int[] randomArray(int arrLength, int rdnNumber){
+        Random rand = new Random();
+        int[] arr = new int[arrLength];
+        for(int j = 0; j < arrLength; j++){
+            int rnd = rand.nextInt(rdnNumber);
+            arr[j] = rnd;
+        }
+        return arr; 
+    }
  
     public static void main(String args[])
     {
         long t1 = System.nanoTime();
         bubble ob = new bubble();
-        int arr[] = {83, 31, 27, 13, 26, 1, 130};
+        int arr[] = randomArray(1000,1000);
         ob.bubbleSort(arr);
         ob.printArray(arr);
         long t2 = System.nanoTime();
-        System.out.println("Sorted Version took for: "+ ((t2-t1)/1000) + " mikro seks" );
+        System.out.println("Sorted Version took for: "+ ((t2-t1)/1000) + " mikro seks | " + ((t2-t1)/1000000)+"ms" );
     }
 }
